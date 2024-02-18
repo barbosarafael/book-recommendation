@@ -160,6 +160,6 @@ cython_debug/
 #.idea/
 
 # Data
-03-data/Books.csv
-03-data/Ratings.csv
-03-data/Users.csv
+03-data/01-raw/
+03-data/02-processed/
+03-data/03-output/
