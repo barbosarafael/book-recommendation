@@ -1,3 +1,4 @@
+import pandas as pd
 import numpy as np
 from scipy.sparse import csr_matrix
 
@@ -17,3 +18,13 @@ def load_sparse_csr(filename):
     loader = np.load(filename)
     return csr_matrix((loader['data'], loader['indices'], loader['indptr']),
                       shape=loader['shape'])
+
+def filter_list_ordered(df: pd.DataFrame, col: str, list_filter: list):
+
+    ind = [df.index[df[col] == i].tolist() for i in list_filter]
+
+    flat_ind = [item for sublist in ind for item in sublist]
+
+    df1 = df.reindex(flat_ind)
+
+    return df1
