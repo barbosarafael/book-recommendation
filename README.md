@@ -1,4 +1,4 @@
-# book-recommendation (incomplete :(    )
+# book-recommendation (incomplete :/)
 
 **Andamento do projeto**:
 
